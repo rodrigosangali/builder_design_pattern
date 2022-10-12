@@ -9,15 +9,17 @@ class PessoaTest {
 
     @Test
     public void testPessoa(){
-        Pessoa p = new Pessoa.PessoaBuilder()
+        Pessoa.BuildName p = new Pessoa.BuildName.BuildNameBuilder()
                 .nome("Rodrigo")
                 .apelido("JirayaBolado")
                 .nomeDoMeio("Suane")
                 .nomeDoPai("Willian")
                 .ultimoNome("Queiroz")
-                .criarPessoa();
+                .build();
 
         System.out.println(p);
     }
 
+    private class PessoaBBuilder {
+    }
 }
