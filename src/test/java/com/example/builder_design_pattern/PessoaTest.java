@@ -9,8 +9,13 @@ class PessoaTest {
 
     @Test
     public void testPessoa(){
-        Pessoa p =  new Pessoa(
-                "Rodrigo", "Queiroz", "Suane", "JirayaBolado", "Willian");
+        Pessoa p = new Pessoa.PessoaBuilder()
+                .nome("Rodrigo")
+                .apelido("JirayaBolado")
+                .nomeDoMeio("Suane")
+                .nomeDoPai("Willian")
+                .ultimoNome("Queiroz")
+                .criarPessoa();
 
         System.out.println(p);
     }
