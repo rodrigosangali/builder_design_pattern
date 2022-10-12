@@ -2,14 +2,12 @@ package com.example.builder_design_pattern;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 
 class PessoaTest {
 
     @Test
     public void testPessoa(){
-        Pessoa.BuildName p = new Pessoa.BuildName.BuildNameBuilder()
+        Pessoa p = new Pessoa.PessoaBuilder()
                 .nome("Rodrigo")
                 .apelido("JirayaBolado")
                 .nomeDoMeio("Suane")
@@ -20,6 +18,4 @@ class PessoaTest {
         System.out.println(p);
     }
 
-    private class PessoaBBuilder {
-    }
 }
